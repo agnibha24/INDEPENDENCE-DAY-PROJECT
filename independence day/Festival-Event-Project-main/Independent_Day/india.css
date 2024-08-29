@@ -1,0 +1,166 @@
+body {
+  background: linear-gradient(to bottom, orange, white, green);
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.container1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.container1 img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 350px;
+}
+
+.flag-section {
+  display: flex;
+}
+
+.stick {
+  height: 600px;
+  width: 20px;
+  background: black;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  position: relative;
+}
+
+.flag-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  height: 300px;
+  clip-path: polygon(32% 6%, 70% 0%, 100% 8%, 100% 99%, 70% 93%, 27% 100%, 0 95%, 0 0);
+  animation: wave 1.5s ease-in-out infinite alternate;
+}
+
+.container2 {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 100%;
+  text-align: center;
+  margin-bottom: -850px;
+}
+
+.container2 video {
+  width: 80%;
+  height: auto;
+  border: 2px solid #000;
+  border-radius: 8px;
+  outline: none;
+}
+
+.container2 video:focus {
+  outline: none;
+}
+
+@keyframes wave {
+  0% { clip-path: polygon(32% 6%, 70% 0%, 100% 8%, 100% 99%, 70% 93%, 27% 100%, 0 95%, 0 0); }
+  25% { clip-path: polygon(32% 4%, 70% 2%, 100% 5%, 100% 96%, 70% 95%, 27% 98%, 0 95%, 0 0); }
+  50% { clip-path: polygon(32% 2%, 70% 4%, 100% 3%, 100% 94%, 70% 97%, 27% 96%, 0 95%, 0 0); }
+  75% { clip-path: polygon(32% 1%, 70% 5%, 100% 2%, 100% 91%, 70% 98%, 27% 95%, 0 95%, 0 0); }
+  100% { clip-path: polygon(31% 0, 70% 6%, 100% 0, 100% 89%, 70% 100%, 27% 93%, 0 95%, 0 0); }
+}
+
+.flag {
+  height: 100px;
+  width: 450px;
+  background: black;
+}
+
+.orange {
+  background: rgb(255, 102, 0);
+  animation: width-move 4s ease;
+}
+
+@keyframes width-move {
+  from { width: 0px; }
+  to { width: 450px; }
+}
+
+.white {
+  background: white;
+  display: flex;
+  justify-content: center;
+  animation: width-move 4s ease;
+}
+
+.flag .ashok-chakra {
+  height: 100px;
+  animation: ashoka 4s linear infinite;
+}
+
+.green {
+  background: green;
+  animation: width-move 4s ease;
+}
+
+@keyframes ashoka {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.message-container {
+  background-color: rgba(0, 0, 0, 0.61);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: -250px;
+  margin-left: 100px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: fadeInDown 2s ease-in-out;
+}
+
+.message-container p {
+  font-size: 1.2em;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
